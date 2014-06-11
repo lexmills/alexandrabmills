@@ -1,0 +1,7 @@
+RewriteRule ^about$ about.php [L]
+RewriteRule ^beckyanddan$ beckyanddan.php [L]
+RewriteRule ^club-os$ club-os.php [L]
+RewriteRule ^happybirthday$ happybirthday.php [L]
+RewriteRule ^urbanoutfitters$ urbanoutfitters.php [L]
+RewriteRule ^xperience$ xperience.php [L]
+

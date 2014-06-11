@@ -4,27 +4,21 @@
 }
 
 body {
-  /*  background: url(images/background.jpg);*/
   position: relative;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   padding: 0 0 70px 0;
   width: 80%;
   margin: 0 auto;
-  background-color: rgba(250, 250, 250, 0.4);
 }
+
+ul { list-style: none; }
 
 a {
   color: #111;
   text-decoration: none;
   cursor: pointer;
   &.selected {
-    text-decoration: underline;
-  }
-}
-
-div {
-  &[roll=portfolio], &[roll=about] {
-    display: none;
+    border-bottom: 1px solid;
   }
 }
 
@@ -88,45 +82,28 @@ section {
 }
 
 /*  Portfolio  */
+figcaption { position: relative; width: 100%; }
 
-div#slideshow {
-  position: relative;
-  min-height: 31em;
-}
+figure {
+  width: 47%;
+  display: inline-block;
+  margin: 0 10px 0 0;
 
-#controls {
-  img {
-    display: none;
-    position: absolute;
-    width: 50px;
-    height: 90px;
-    top: 13%;
-    z-index: 100;
-  }
-  a {
-    &.left img {
-      left: 3em;
-    }
-    &.right img {
-      right: 3em;
-    }
-  }
-}
-
-div[roll=portfolio] figure {
-  background: #fff;
-  position: absolute;
-  left: 0;
-  top: 0;
-  margin: 10px auto;
   img {
     width: 100%;
-    max-height: 27em;
+    box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px;
+    margin: 0 20px 20px 0;
   }
-}
 
-figcaption {
-  padding: 0 0 2em 0;
+  span { padding: 0 0 5px 0;
+    span { display: block; font-size: .8em; }
+  }
+
+  span:nth-of-type(2) {
+    position: absolute; right: 0; top: 0;
+
+    i { padding: 12px 0 0 5px; font-size: 1.5em; }
+  }
 }
 
 /* About */
@@ -154,6 +131,36 @@ footer {
   text-align: center;
 }
 
+/* Pages */
+.page {
+  h1 { text-align: center; margin: 20px 0; }
+
+  p { padding: 0 0 10px 0; }
+
+  .excerpt {
+    display: inline-block;
+    width: 60%;
+    padding: 0 10px 0 0;
+    text-align: justify;
+  }
+
+  .role {
+    display: inline-block;
+    width: 35%;
+    vertical-align: top;
+
+    span { font-weight: bold; }
+
+    a:hover { border-bottom: 1px solid; }
+  }
+
+  .page-images {
+    text-align: center;
+
+    img { margin: 30px 10px 10px 0; max-width: 650px; }
+  }
+}
+
 /* Responsive Design Elements */
 @media screen and (max-width: 480px) {
   header h1 {
@@ -172,3 +179,4 @@ footer {
     width: 55em;
   }
 }
+

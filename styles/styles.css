@@ -3,23 +3,21 @@
   padding: 0; }
 
 body {
-  /*  background: url(images/background.jpg);*/
   position: relative;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   padding: 0 0 70px 0;
   width: 80%;
-  margin: 0 auto;
-  background-color: rgba(250, 250, 250, 0.4); }
+  margin: 0 auto; }
+
+ul {
+  list-style: none; }
 
 a {
   color: #111;
   text-decoration: none;
   cursor: pointer; }
   a.selected {
-    text-decoration: underline; }
-
-div[roll=portfolio], div[roll=about] {
-  display: none; }
+    border-bottom: 1px solid; }
 
 /*  Resume  */
 header > h1 {
@@ -67,34 +65,30 @@ section[data-id="education"] p {
   margin-bottom: 20px; }
 
 /*  Portfolio  */
-div#slideshow {
-  position: relative;
-  min-height: 31em; }
-
-#controls img {
-  display: none;
-  position: absolute;
-  width: 50px;
-  height: 90px;
-  top: 13%;
-  z-index: 100; }
-#controls a.left img {
-  left: 3em; }
-#controls a.right img {
-  right: 3em; }
-
-div[roll=portfolio] figure {
-  background: #fff;
-  position: absolute;
-  left: 0;
-  top: 0;
-  margin: 10px auto; }
-  div[roll=portfolio] figure img {
-    width: 100%;
-    max-height: 27em; }
-
 figcaption {
-  padding: 0 0 2em 0; }
+  position: relative;
+  width: 100%; }
+
+figure {
+  width: 47%;
+  display: inline-block;
+  margin: 0 10px 0 0; }
+  figure img {
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px;
+    margin: 0 20px 20px 0; }
+  figure span {
+    padding: 0 0 5px 0; }
+    figure span span {
+      display: block;
+      font-size: .8em; }
+  figure span:nth-of-type(2) {
+    position: absolute;
+    right: 0;
+    top: 0; }
+    figure span:nth-of-type(2) i {
+      padding: 12px 0 0 5px;
+      font-size: 1.5em; }
 
 /* About */
 div[roll=about] {
@@ -114,6 +108,31 @@ footer {
   padding-top: .2em;
   margin-top: 2em;
   text-align: center; }
+
+/* Pages */
+.page h1 {
+  text-align: center;
+  margin: 20px 0; }
+.page p {
+  padding: 0 0 10px 0; }
+.page .excerpt {
+  display: inline-block;
+  width: 60%;
+  padding: 0 10px 0 0;
+  text-align: justify; }
+.page .role {
+  display: inline-block;
+  width: 35%;
+  vertical-align: top; }
+  .page .role span {
+    font-weight: bold; }
+  .page .role a:hover {
+    border-bottom: 1px solid; }
+.page .page-images {
+  text-align: center; }
+  .page .page-images img {
+    margin: 30px 10px 10px 0;
+    max-width: 650px; }
 
 /* Responsive Design Elements */
 @media screen and (max-width: 480px) {
